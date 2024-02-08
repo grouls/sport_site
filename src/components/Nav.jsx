@@ -7,7 +7,7 @@ import { useState } from "react";
 const Nav = () => {
   const [isMobileMenuShow, setIsMobileMenuShown] = useState(false);
   return (
-    <nav className="flex flex-wrap justify-between items-center">
+    <nav className="flex flex-wrap justify-between items-center z-10 relative ">
       <a href="">
         <NikeLogo className="h-20 w-20" />
       </a>
@@ -25,7 +25,7 @@ const Nav = () => {
             return (
               <li
                 key={route}
-                className={`py-2 px-3 cursor-pointer rounded ${i === 0 ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-500" : "hover:bg-gray-100"}`}
+                className={`py-2 px-3 cursor-pointer rounded ${i === 0 ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-500" : "hover:bg-gray-100"} ${(i === 3 || i === 4) && "lg:text-white lg:hover:text-blue-500 lg:hover:bg-transparent"}`}
               >
                 {route}
               </li>
@@ -33,8 +33,8 @@ const Nav = () => {
           })}
         </ul>
       </div>
-      <div className="fixed left-4 bottom-4 lg:static">
-        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md">
+      <div className="fixed left-4 bottom-4 lg:static lg:mr-8">
+        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer">
           <TbShoppingBag />
         </div>
       </div>
