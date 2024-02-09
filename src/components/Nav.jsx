@@ -13,7 +13,7 @@ const Nav = () => {
       </a>
       <button
         onClick={() => setIsMobileMenuShown(!isMobileMenuShow)}
-        className="p-2 focus:ring-2 focus:ring-gray-200 rounded-lg hover:bg-gray-100 lg:hidden"
+        className="btn-press-anim p-2 focus:ring-2 focus:ring-gray-200 rounded-lg hover:bg-gray-100 lg:hidden"
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -34,7 +34,7 @@ const Nav = () => {
         </ul>
       </div>
       <div className="fixed left-4 bottom-4 lg:static lg:mr-8">
-        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer">
+        <div className="btn-press-anim flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer">
           <TbShoppingBag />
         </div>
       </div>
