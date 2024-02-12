@@ -3,8 +3,9 @@ import NikeLogo from "../assets/nike-logo.svg?react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ROUTES } from "../config";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-const Nav = () => {
+const Nav = ({ onClickShoppingBtn }) => {
   const [isMobileMenuShow, setIsMobileMenuShown] = useState(false);
   return (
     <nav className="flex flex-wrap justify-between items-center z-10 relative ">
@@ -34,12 +35,19 @@ const Nav = () => {
         </ul>
       </div>
       <div className="fixed left-4 bottom-4 lg:static lg:mr-8">
-        <div className="btn-press-anim flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer">
+        <div
+          className="btn-press-anim flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer"
+          onClick={onClickShoppingBtn}
+        >
           <TbShoppingBag />
         </div>
       </div>
     </nav>
   );
+};
+
+Nav.propTypes = {
+  onClickShoppingBtn: PropTypes.func,
 };
 
 export default Nav;
