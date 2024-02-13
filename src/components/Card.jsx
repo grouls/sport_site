@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 
-const Card = ({ key, item }) => {
+const Card = ({ key, item, onClick }) => {
   return (
     <div
       key={key}
       className={`${item.className} max-w-xl cursor-pointer transform transition hover:scale-105`}
+      onClick={() => onClick(item)}
     >
       <div className="p-8">
         <div className="text-2xl font-bold">{item.title}</div>
@@ -33,6 +34,7 @@ Card.propTypes = {
     description: PropTypes.string,
     price: PropTypes.number,
   }),
+  onClick: PropTypes.func,
 };
 
 export default Card;
