@@ -5,19 +5,19 @@ import { QTY, SIZE } from "../config";
 
 const CartItem = ({ item: { product, qty, size } }) => {
   return (
-    <div className="hover:bg-[#DAFFA2] cursor-pointer bg-gray-50 p-2 space-y-2">
+    <div className="hover:bg-[#DAFFA2] cursor-pointer bg-gray-50 p-2 space-y-2 dark:bg-transparent dark:hover:bg-night-50">
       <div className="flex space-x-2">
         <img className="h-24" src={product.img.src} alt={product.img.alt} />
         <div className="space-y-2">
-          <div className="font-bold">{product.title}</div>
+          <div className="font-bold dark:text-white">{product.title}</div>
           <div className="text-sm text-gray-400">{product.description}</div>
         </div>
-        <div className="font-bold">{product.price}€</div>
+        <div className="font-bold dark:text-white">{product.price}€</div>
       </div>
       <div className="flex justify-between pl-32">
         <div className="flex space-x-6">
           <div>
-            <div className="font-bold">SIZE</div>
+            <div className="font-bold dark:text-white">SIZE</div>
             <Select
               defaultValue={size}
               title={"SIZE"}
@@ -26,7 +26,7 @@ const CartItem = ({ item: { product, qty, size } }) => {
             />
           </div>
           <div>
-            <div className="font-bold">QTY</div>
+            <div className="font-bold dark:text-white">QTY</div>
             <Select
               defaultValue={qty}
               title={"QTY"}
@@ -36,7 +36,7 @@ const CartItem = ({ item: { product, qty, size } }) => {
           </div>
         </div>
         <button>
-          <CiTrash size={25} className="text-black" />
+          <CiTrash size={25} className="text-black dark:text-white" />
         </button>
       </div>
     </div>
