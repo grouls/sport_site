@@ -49,6 +49,7 @@ const CartItem = ({ item: { product, qty, size }, onClickRemove }) => {
 CartItem.propTypes = {
   item: PropTypes.shape({
     product: PropTypes.shape({
+      id: PropTypes.number,
       title: PropTypes.string.isRequired,
       img: PropTypes.shape({
         src: PropTypes.string,
