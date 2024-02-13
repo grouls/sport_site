@@ -36,7 +36,10 @@ const CartItem = ({ item: { product, qty, size }, onClickRemove }) => {
           </div>
         </div>
         <button onClick={() => onClickRemove(product.id)}>
-          <CiTrash size={25} className="text-black dark:text-white" />
+          <CiTrash
+            size={25}
+            className="btn-press-anim text-black dark:text-white"
+          />
         </button>
       </div>
     </div>
