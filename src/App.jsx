@@ -1,9 +1,10 @@
 import NewArrivalsSection from "./components/NewArrivalsSection";
-import { SHOE_LIST } from "./config";
+import { SHOE_LIST, CART_ITEMS } from "./config";
 import Nav from "./components/Nav";
 import ShoeDetail from "./components/ShoeDetail";
 import Sidebar from "./components/Sidebar";
 import { useState } from "react";
+import Cart from "./components/Cart";
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -16,7 +17,7 @@ function App() {
         isOpen={isSidebarOpen}
         onClickCloseBtn={() => setSidebarOpen(false)}
       >
-        Cart
+        <Cart cartItems={CART_ITEMS} />
       </Sidebar>
     </div>
   );

@@ -1,14 +1,17 @@
 import PropTypes from "prop-types";
 import { IoIosArrowDown } from "react-icons/io";
+import { twMerge } from "tw-merge";
 
-const Select = ({ title, options }) => {
+const Select = ({ title, options, className, defaultValue }) => {
   return (
     <div className="relative">
       <select
         name={title}
         id={title}
-        defaultValue={""}
-        className="w-24 appearance-none border border-gray-300 p-4 bg-white"
+        defaultValue={defaultValue || ""}
+        className={twMerge(
+          `appearance-none border border-gray-300 bg-white ${className}`
+        )}
       >
         <option value="" disabled hidden>
           {title}
@@ -31,6 +34,8 @@ const Select = ({ title, options }) => {
 Select.propTypes = {
   title: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.number),
+  className: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 export default Select;

@@ -19,15 +19,15 @@ const NewArrivalsSection = ({ items }) => {
 };
 
 NewArrivalsSection.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
+      title: PropTypes.string,
       img: PropTypes.shape({
-        src: PropTypes.string.isRequired,
-        alt: PropTypes.string.isRequired,
+        src: PropTypes.string,
+        alt: PropTypes.string,
       }),
-      className: PropTypes.string.isRequired,
+      className: PropTypes.string,
       description: PropTypes.string,
       price: PropTypes.number,
     })

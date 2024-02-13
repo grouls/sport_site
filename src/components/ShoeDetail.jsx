@@ -23,8 +23,8 @@ const ShoeDetail = () => {
         </div>
         <div className="flex space-x-6">
           <div className="text-3xl font-extrabold md:text-6xl">100 €</div>
-          <Select title={"QTY"} options={QTY} />
-          <Select title={"SIZE"} options={SIZE} />
+          <Select title={"QTY"} options={QTY} className={"w-24 p-4"} />
+          <Select title={"SIZE"} options={SIZE} className={"w-24 p-4"} />
         </div>
         <div className="space-x-10">
           <button className="btn-press-anim h-14 w-44 bg-black text-white hover:bg-gray-900 active:bg-gray-700">

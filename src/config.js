@@ -59,3 +59,11 @@ export const SHOE_LIST = [
     price: 110,
   },
 ];
+
+export const CART_ITEMS = SHOE_LIST.map((shoe) => {
+  return {
+    product: shoe,
+    qty: 1,
+    size: 9,
+  };
+});
